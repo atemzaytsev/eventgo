@@ -11,22 +11,24 @@
         </header>
     </div>
     <!--Filter buttons-->
-    <div class="row">
-        <div class="col-md-12">
-            <div id="isotope-filters">
-                <button class="btn btn-outline-dark active" data-filter="*"><span>All</span></button>
-                <button class="btn btn-outline-dark" data-filter=".sport"><span>Sport</span></button>
-                <button class="btn btn-outline-dark" data-filter=".concert"><span>Concert</span></button>
-                <button class="btn btn-outline-dark" data-filter=".theatre"><span>Theatre</span></button>
-                <button class="btn btn-outline-dark" data-filter=".exhibition"><span>Exhibition</span></button>
-            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="isotope-filters">
+                    <button class="btn btn-outline-dark active" data-filter="*"><span>All</span></button>
+                    <button class="btn btn-outline-dark" data-filter=".sport"><span>Sport</span></button>
+                    <button class="btn btn-outline-dark" data-filter=".concert"><span>Concert</span></button>
+                    <button class="btn btn-outline-dark" data-filter=".theatre"><span>Theatre</span></button>
+                    <button class="btn btn-outline-dark" data-filter=".exhibition"><span>Exhibition</span></button>
+                </div>
 
+            </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div id="isotope-container">
-      <!--Event item-->
+                <!--Event item-->
                 <% event.forEach(function(event){ %>
                     <div class="col-lg-4 col-md-6 col-sm-12 jsearch-row item <%= event.category %>">
                         <div class="card">
