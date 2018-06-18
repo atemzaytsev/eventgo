@@ -1,0 +1,50 @@
+<% include ./partials/header %>
+ <div class ="container">
+   <header class="jumbotron">
+         <div class="container">
+             <h1><span class="glyphicon glyphicon-tent"></span> Welcome To EventGo!</h1>
+             <p>View the most interesting events in your city!</p>
+             <p>
+                <a class="btn btn-dark btn-lg" href="/events/new">Add New Event</a>
+             </p>
+         </div>
+     </header>
+     
+     </div class = "row">
+                            <div class = "col-md-12">
+                               <div id = "isotope-filters">
+                                 <button class = "btn btn-outline-dark active" data-filter = "*"><span>All</span></button>
+                                 <button class = "btn btn-outline-dark" data-filter = ".sport"><span>Sport</span></button>
+                                 <button class = "btn btn-outline-dark" data-filter = ".concert"><span>Concert</span></button>
+                                 <button class = "btn btn-outline-dark" data-filter = ".theatre"><span>Theatre</span></button>
+                                 <button class = "btn btn-outline-dark" data-filter = ".exhibition"><span>Exhibition</span></button>                                                                                                    
+                               </div>
+                                
+                            </div>
+                            </div>
+     <div class = "container-fluid">
+   <div class="row" >
+       <div id = "isotope-container">
+      
+        <% event.forEach(function(event){ %>
+            <div class="col-lg-4 col-md-6 col-sm-12 jsearch-row item <%= event.category %>">
+                <div class="card" >
+                     <div class="card-header jsearch-field"><h4><%= event.title %></h4>
+    
+  </div>
+  <img class="card-img-top" src="<%= event.image %>" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= event.organiser %></h5>
+    <p class="card-text jsearch-field"><%= event.place %></p>
+    <a href="/events/<%= event._id %>" class="btn btn-dark">Read More</a>
+    <p class="pull-right"><em><%= event.start %></em></p>
+  </div>
+</div>
+    
+            </div>
+        <% }); %>
+    </div>
+    </div>
+    </div>
+
+<% include ./partials/footer %>

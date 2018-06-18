@@ -1,0 +1,119 @@
+#home-bg-video {
+    /*position: absolute;*/
+    /*top:0;*/
+    /*left:0;*/
+    /*height:100%;*/
+    /*width: 100%;*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background: url("../event.jpg") no-repeat;
+    background-size: cover;
+}
+#preloader {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+#status {
+    background-image: url("/media/preloader.gif");
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -45px;
+    margin-left: -45px;
+}
+#home-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+.content h1 {
+	font-weight: 100;
+	font-size: 5em;
+	color: #0c83bf
+}
+.content a {
+    color: #0c83bf
+}
+.content h3 {
+	font-weight: 100;
+	
+}
+
+.content{
+	padding-top: 20%;
+	text-align: center;
+	color: #EAEEF0;
+}
+
+.content h1, .content h3{
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+hr {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.thumbnail img {
+    width: 100%;
+}
+.card {
+    margin-bottom: 1em;
+    -webkit-transition: transform .5s ease;transition: transform .5s ease; 
+}
+.card:hover  {
+    -webkit-transform: scale(1.03);transform: scale(1.03)
+}
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+div#show-item {
+    margin-top: 3em;
+}
+.edit-new h1{
+    margin-top: 1em;
+}
+
+.jumbotron {
+    margin: 1em;
+    
+}
+
+#isotope-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#isotope-filters {
+    margin-bottom: 1em;
+}
+button.btn-outline-dark  {
+    margin:5px;
+}

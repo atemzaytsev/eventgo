@@ -1,0 +1,76 @@
+<% include ./partials/header %>
+
+<div class = "container text-centered edit-new">
+    <h1 style="text-align: center">Create new event</h1>
+   <div style="width: 70%; margin: 25px auto;">
+    <form action="/events" method="POST">
+  <div class="form-group">
+    <label for="title">Title of event</label>
+    <input type="text" class="form-control" id="title"  placeholder="Title" name="event[title]">
+    
+  </div>
+  <div class="form-group">
+    <label for="organizer">Organizer</label>
+    <input type="text" class="form-control" id="organizer" placeholder="Organizer" name="event[organiser]">
+  </div>
+   <div class="form-group">
+    <label for="location">Location</label>
+    <input type="text" class="form-control" id="location" placeholder="Location" name = "event[place]" autocomplete="off">
+    <small id="emailHelp" class="form-text text-muted">City and street</small>
+    <script>
+        function activatePlaceSearch() {
+        var input = document.getElementById("location");
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        };
+    </script>
+  </div>
+  
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+        <label for="start">Start time</label>
+            <input type="text" name = "event[start]" class="form-control datetimepicker-input" id="start" data-toggle="datetimepicker" data-target="#start"/ placeholder="Satrt Time" autocomplete="off">
+        </div>
+        </div>
+        
+    </div>
+     <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+    <label for="finish">Finish Time</label>
+            <input type="text" name = "event[finish]" class="form-control datetimepicker-input" id="finish" data-toggle="datetimepicker" data-target="#finish"/ placeholder="Finish time" autocomplete="off">
+        </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+    <label for="image">Image</label>
+    <input type="text" class="form-control" id="image" placeholder="Image URL" name="event[image]">
+  </div>
+  <div class="form-row align-items-center">
+    <div class="col-auto my-1">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">Category</label>
+      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="event[category]">
+        <option selected>Choose the category</option>
+        <option value="sport">Sport</option>
+        <option value="concert">Concert</option>
+        <option value="exhibition">Exhibition</option>
+        <option value="theatre">Theatre</option>
+        <option value="festival">Festival</option>
+      </select>
+    </div>
+    </div>
+    
+  <div class="form-group">
+    <label for="body">Description of event</label>
+    <textarea class="form-control" id="body" rows="6" name="event[body]"></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+
+
+
+<% include ./partials/footer %>
