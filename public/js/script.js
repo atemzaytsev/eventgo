@@ -1,15 +1,23 @@
+
+//==========================
+//Preloader
+//==========================
 $(window).on("load", function () {
     $("#status").fadeOut();
     $("#preloader").delay(350).fadeOut("slow");
 });
 
+//==========================
+//DateTime picker
+//==========================
 $(function () {
     $('.datetimepicker-input').datetimepicker();
 });
 
-
+//==========================
+//Search
+//==========================
 $(function () {
-    $('.datetimepicker-input').datetimepicker();
     $("#jquery-search-sample").jsearch({
 
         rowClass: '.jsearch-row',
@@ -25,13 +33,18 @@ $(function () {
     });
 });
 
-
+//==========================
+//Clean Date input on the edit page
+//==========================
 $(function () {
     $(".when").on("click", function () {
         this.value = "";
     });
 });
 
+//==========================
+//Filtering
+//==========================
 $(window).on("load", function () {
 
     $("#isotope-filters").on("click", "button", function () {
